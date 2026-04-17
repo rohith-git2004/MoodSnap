@@ -138,15 +138,13 @@ Build Command:
 
 pip install -r requirements.txt
 
-Start Command:
-
-uvicorn main:app --host 0.0.0.0 --port 10000
+Start Command: uvicorn main:app --host 0.0.0.0 --port 10000
 🌍 Frontend
 
-Update API base URL in:
+Update API base URL in: https://moodsnap-8thy.onrender.com
 
 services/api.js
-baseURL: "https://your-backend-url.onrender.com"
+baseURL: "https://your-backend-url.onrender.com/api"
 🎨 UI Features
 Clean centered layout
 Fully responsive design
