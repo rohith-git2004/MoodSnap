@@ -66,89 +66,120 @@ This project focuses on core functionality, clean UI, and full-stack integration
 ---
 
 ## 🗂️ Project Structure
+
+
 MoodSnap/
 │
 ├── backend/
-│   ├── main.py
-│   ├── database.py
-│   ├── routes/
-│   │   ├── auth.py
-│   │   ├── moods.py
-│   │   └── stats.py
-│   ├── schemas/
-│   │   └── mood_schema.py
-│   └── utils/
-│       └── role_checker.py
+│ ├── main.py
+│ ├── database.py
+│ ├── routes/
+│ │ ├── auth.py
+│ │ ├── moods.py
+│ │ └── stats.py
+│ ├── schemas/
+│ │ └── mood_schema.py
+│ └── utils/
+│ └── role_checker.py
 │
 ├── frontend/
-│   ├── app/
-│   │   ├── login/page.jsx
-│   │   ├── dashboard/page.jsx
-│   │   ├── layout.js
-│   │   ├── globals.css
-│   │   └── page.jsx
-│   ├── components/
-│   │   ├── MoodForm.jsx
-│   │   ├── TimelineList.jsx
-│   │   └── StatsPanel.jsx
-│   ├── services/api.js
-│   └── utils/auth.js
+│ ├── app/
+│ │ ├── login/page.jsx
+│ │ ├── dashboard/page.jsx
+│ │ ├── layout.js
+│ │ ├── globals.css
+│ │ └── page.jsx
+│ ├── components/
+│ │ ├── MoodForm.jsx
+│ │ ├── TimelineList.jsx
+│ │ └── StatsPanel.jsx
+│ ├── services/api.js
+│ └── utils/auth.js
 │
 └── README.md
+
 
 ---
 
 ## 🔌 API Endpoints
-Base URL: /api
 
-Auth:
+Base URL: `/api`
+
+**Auth**
+
 POST /api/auth/login
 
-Mood:
-POST   /api/moods  
-GET    /api/moods  
+
+**Mood**
+
+POST /api/moods
+GET /api/moods
 DELETE /api/moods/{id}
 
-Stats:
+
+**Stats**
+
 GET /api/stats
+
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### Backend
-cd backend  
-python -m venv venv  
-venv\Scripts\activate  
-pip install -r requirements.txt  
 
-Create .env:
-MONGO_URL=your_mongodb_connection_string  
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+
+Create `.env`:
+
+MONGO_URL=your_mongodb_connection_string
+
 
 Run server:
-uvicorn main:app --reload  
+
+uvicorn main:app --reload
+
 
 ---
 
 ### Frontend
-cd frontend  
-npm install  
-npm run dev  
+
+cd frontend
+npm install
+npm run dev
+
 
 ---
 
 ## 🌐 Deployment
 
-Backend (Render):
-Build Command:
-pip install -r requirements.txt  
+### Backend (Render)
 
-Start Command:
-uvicorn main:app --host 0.0.0.0 --port 10000  
+**Build Command**
 
-Frontend:
-Update API base URL in services/api.js:
-baseURL: "https://your-backend-url.onrender.com/api"
+pip install -r requirements.txt
+
+
+**Start Command**
+
+uvicorn main:app --host 0.0.0.0 --port 10000
+
+
+---
+
+### Frontend
+
+Update API base URL in:
+
+frontend/services/api.js
+
+baseURL: "https://your-backend-url.onrender.com/api
+"
+
 
 ---
 
