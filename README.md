@@ -146,7 +146,7 @@ uvicorn main:app --host 0.0.0.0 --port 10000
 Update API base URL in:
 
 services/api.js
-baseURL: "https://your-backend-url.onrender.com/api"
+baseURL: "https://your-backend-url.onrender.com"
 🎨 UI Features
 Clean centered layout
 Fully responsive design
